@@ -1,3 +1,28 @@
+Reference: _
+https://helm.sh/docs/topics/library_charts/
+https://git.app.uib.no/caleno/helm-charts/-/tree/601c467676073b2e5e5d1c9e9a9a61ec10b4bd7d/incubator/common
+
+Commands used:
+
+* create library chart
+helm create libchart
+rm -rf libchart/templates/*
+rm -f libchart/values.yaml 
+* create  _*.yaml & _*.tpl template in template folder.
+* In Chart edit the type: library
+* Create application chart - helm create appchart
+* add below lines in appchart -> charts
+dependencies:
+- name: libchart
+  version: 0.1.0
+  repository: file://../libchart
+* create templates and values
+
+* helm dependency update appchart/
+* helm install mydemo appchart/ --debug --dry-run
+
+
+
 Library chart helps you define similar definitions that could be shared among your Helm charts. this can be Helper, Logic, Templates depends on your need.
 
 This is exactly what I am looking for, so let’s see how it works.
