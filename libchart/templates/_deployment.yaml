@@ -1,0 +1,18 @@
+{{- define "libchart.deployment.tpl" -}}
+apiVersion: apps/v1
+kind: deployment
+{{ template "libchart.metadata" . }}
+spec:
+  template:
+    metadata:
+      labels:
+        app: {{ template "libchart.name" . }}
+        release: {{ .Release.Name | quote }}
+    spec:
+      containers:
+      -
+{{ include "libchart.container.tpl" . | indent 8 }}
+{{- end -}}
+{{- define "libchart.deployment" -}}
+{{- template "libchart.util.merge" (append . "libchart.deployment.tpl") -}}
+{{- end -}}

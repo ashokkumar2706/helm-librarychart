@@ -1,0 +1,13 @@
+{{ template "libchart.service" (list . "appchart.web.service") -}}
+{{- define "appchart.web.service" -}}
+metadata:
+  name: {{ template "libchart.fullname" . }}-www  # overrides the default name to add a suffix
+  labels:                                       # appended to the labels section
+    protocol: www
+spec:
+  ports:                                        # composes the `ports` section of the service definition.
+  - name: www
+    port: 80
+    targetPort: 8080
+{{- end -}}
+

@@ -1,0 +1,21 @@
+{{- template "libchart.deployment" (list . "appchart.deployment") -}}
+{{- define "appchart.deployment" -}}
+## Define overrides for your Deployment resource here, e.g.
+spec:
+  template:
+    spec:
+      containers:
+      - {{ template "libchart.container" (list . "appchart.deployment.container") }}
+{{- end -}}
+{{- define "appchart.deployment.container" -}}
+## Define overrides for your Container here, e.g.
+livenessProbe:
+  httpGet:
+    path: /
+    port: 80
+readinessProbe:
+  httpGet:
+    path: /
+    port: 80
+{{- end -}}
+

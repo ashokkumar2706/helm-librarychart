@@ -1,0 +1,17 @@
+{{- define "libchart.service.tpl" -}}
+apiVersion: v1
+kind: Service
+{{ template "libchart.metadata" . }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - name: http
+    port: 80
+    targetPort: http
+  selector:
+    app: {{ template "libchart.name" . }}
+    release: {{ .Release.Name | quote }}
+{{- end -}}
+{{- define "libchart.service" -}}
+{{- template "libchart.util.merge" (append . "libchart.service.tpl") -}}
+{{- end -}}

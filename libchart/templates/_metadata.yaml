@@ -1,0 +1,10 @@
+{{- /*
+libchart.metadata creates a standard metadata header.
+It creates a 'metadata:' section with name and labels.
+*/ -}}
+{{ define "libchart.metadata" -}}
+metadata:
+  name: {{ template "libchart.fullname" . }}
+  labels:
+{{ include "libchart.labels.standard" . | indent 4 -}}
+{{- end -}}
