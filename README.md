@@ -27,7 +27,7 @@ https://github.com/ActianCorp/integration-manager-umbrella-helm-chart
 
 https://github.com/clearmatics/autonity-helm
 
-
+-----------------------------------------------------
 Commands used:
 
 * create library chart
@@ -47,7 +47,7 @@ dependencies:
 * helm dependency update appchart/
 * helm install mydemo appchart/ --debug --dry-run
 
-
+----------------------------------------------------------------------------------------------
 
 Library chart helps you define similar definitions that could be shared among your Helm charts. this can be Helper, Logic, Templates depends on your need.
 
