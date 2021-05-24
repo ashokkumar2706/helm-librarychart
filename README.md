@@ -1,6 +1,32 @@
 Reference: _
 https://helm.sh/docs/topics/library_charts/
+
 https://git.app.uib.no/caleno/helm-charts/-/tree/601c467676073b2e5e5d1c9e9a9a61ec10b4bd7d/incubator/common
+
+helm file
+
+if else condition
+https://github.com/hickeyma/redhat-marketplace-helm-charts/blob/main/charts/grafana/templates/clusterrole.yaml
+
+dependency confition - tag 
+https://github.com/antonputra/tutorials/tree/main/lessons/022
+
+https://www.youtube.com/watch?v=LAVCJorZ2AA
+
+quote, repeat, include , required, default,nindent,toyaml, --set setvice.type=NodePort, https://hub.helm.sh/ ,chart dependency
+https://www.youtube.com/watch?v=FdK7g4xYPbg
+
+condition - if else, with ,range,
+
+https://github.com/ThalesGroup/helm-spray
+
+Helmfile, helmfile hook, helm secrets, labels (to deploy specific chart)
+https://github.com/roboll/helmfile
+
+https://github.com/ActianCorp/integration-manager-umbrella-helm-chart
+
+https://github.com/clearmatics/autonity-helm
+
 
 Commands used:
 
