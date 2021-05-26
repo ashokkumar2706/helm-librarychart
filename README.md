@@ -27,6 +27,13 @@ https://github.com/ActianCorp/integration-manager-umbrella-helm-chart
 
 https://github.com/clearmatics/autonity-helm
 
+https://github.com/broadinstitute/datarepo-helm/tree/master/charts/datarepo
+
+https://github.com/mikemybytes/helm-umbrella-charts-isolation-issue-example
+
+https://github.com/CodeJjang/helm-microservices-example
+
+https://codefresh.io/helm-tutorial/run-apply-codefresh-helmfile-step-step-guide/
 -----------------------------------------------------
 Commands used:
 
